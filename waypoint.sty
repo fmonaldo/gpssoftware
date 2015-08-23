@@ -1,0 +1,18 @@
+# Date 08/11/2008
+# Bob Jensen
+
+DESCRIPTION Log file dump
+EXTENSION txt
+
+FIELD_DELIMITER TAB
+RECORD_DELIMITER NEWLINE
+BADCHARS ,"
+
+PROLOGUE	name	date/time	longitude	latitude	altitude	icon
+
+IFIELD SHORTNAME,"","%s"
+IFIELD ISO_TIME,"","%s"
+IFIELD LON_DECIMAL,"","%.7f"
+IFIELD LAT_DECIMAL,"","%.7f"
+IFIELD ALT_METERS,"",%.0f"
+IFIELD ICON_DESCR,"","%s"

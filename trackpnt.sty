@@ -1,0 +1,26 @@
+# Date 08/31/2008
+# Bob Jensen
+
+DESCRIPTION Log file dump
+EXTENSION txt
+
+FIELD_DELIMITER TAB
+RECORD_DELIMITER NEWLINE
+BADCHARS ,"
+
+PROLOGUE	index	seconds	date/time	longitude	latitude	altitude	speed	path_length
+
+IFIELD ISO_TIME,"","%s"
+IFIELD LON_DECIMAL,"","%.7f"
+IFIELD LAT_DECIMAL,"","%.7f"
+IFIELD ALT_METERS,"",%.0f"
+IFIELD PATH_SPEED_MPH,"","%.1f"
+
+OFIELD INDEX,"1","%06d"
+OFIELD TIMET_TIME,"","%ld"
+OFIELD ISO_TIME,"","%s"
+OFIELD LON_DECIMAL,"","%.7f"
+OFIELD LAT_DECIMAL,"","%.7f"
+OFIELD ALT_METERS,"",%.0f"
+OFIELD PATH_SPEED_MPH,"","%4.1f"
+OFIELD PATH_DISTANCE_MILES,"",%.3f"
