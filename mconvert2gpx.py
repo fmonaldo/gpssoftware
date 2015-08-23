@@ -6,17 +6,18 @@
 #
 # Import modules
 #
+# 2015 Aug 13 Frank Monaldo Add *CSV files from Columbus v990 receiver
 
 import glob
 import os
 
 
 #
-# Find TES files
-tesfiles = glob.glob('*.TES')
+# Find TES and CSV files
+inputfiles = glob.glob('*.TES') + glob.glob('*.CSV')
 #
 # Convert files to gpx and kmz
 #
-for file in tesfiles:
+for file in inputfiles:
   cmd= 'convert2gpx.py ' + file
   os.system(cmd)
